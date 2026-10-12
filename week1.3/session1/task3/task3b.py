@@ -3,7 +3,9 @@
 fruit = ['apple','pear','banana','orange']
 
 while fruit:
-	print(fruit.pop())
-
+	print(f"Removing {fruit.pop()}...")
+else:
+	print("List is now empty")
+	print(fruit)
 
 # Add an else clause with a message that the list is now empty
