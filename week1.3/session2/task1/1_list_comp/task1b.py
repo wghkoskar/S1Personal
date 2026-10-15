@@ -1,7 +1,9 @@
 # Week 1.3, Session 1: Task 6b
 
 values = [1,4,2,6,3,7]
-
+values.sort()
+print(values)
+"""
 print(values)
 
 newval = []
@@ -12,6 +14,8 @@ for i in values:
         newval.append(i)
 
 print(newval)
-
+"""
 # write the list comprehension equivalent to the `for` loop
 
+newval = [i*2 if i % 2 == 0 else i for i in values ]
+print(newval)

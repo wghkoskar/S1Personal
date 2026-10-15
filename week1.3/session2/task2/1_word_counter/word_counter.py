@@ -4,7 +4,18 @@
 # You can use any of the .txt files to test this - or even make your own.
 
 # open and read the file
+fileOpen = input("Which file should I open? ")
+remove = ["", " "]
+finalWords = []
 
+with open(fileOpen, "r") as infile:
+    for line in infile:
+        words = line.strip().split(" ")
+        for word in words:
+            if word not in remove:
+                finalWords.append(word)
+
+print(len(finalWords))
 # calculate the number of words
 # hint: you could use .split() to break up by spaces
 # hint: watch out for empty lines that might give you empty strings

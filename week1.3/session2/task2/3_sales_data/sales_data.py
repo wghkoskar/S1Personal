@@ -8,8 +8,9 @@
 #   - average sale amount
 #   - the widget which has been sold the most
 # and print these out in a nice, human-readable format
-
-
+with open("sales.csv", "r") as infile:
+    headers = infile.readlines()[0] 
+    print(headers)
 # additional: you can calculate other sales statistics such as:
 # - total sales for each region
 # - most sold widget for each region

@@ -2,6 +2,17 @@
 
 # Open 'student_data.csv' to read each student's grades
 # hint: skip the header row with data[1:]
+with open("student_data.csv", "r") as infile:
+    with open("report.txt", "w") as outfile:
+        for i in infile.readlines()[1:]:
+            x = i.strip().split(",")
+            average = (int(x[2]) + int(x[3]) + int(x[4])) / 3
+            with open("report.txt", "a") as outfile:
+                outfile.write(f"{x[1]}'s average grade is {round(average, 2)} \n")
+
+            
+
+
 
 
 # Read each student's grades and calculate their average grade
