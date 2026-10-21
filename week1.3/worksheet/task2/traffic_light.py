@@ -11,8 +11,17 @@ maxtime = int(input())  # read an integer number of steps (>0)
 
 state = "red"
 
-print(f"Time {systime:03} State {state}")
+associatedLingerTime = states.get(state)
+stateIndex = 0
+currentDuration = 0
 
-# Simulate the traffic light system up to time=maxtime in 1-second steps
+for i in range(maxtime + 1): # 
+    if associatedLingerTime == currentDuration: # Checks whether the lingering has been going on enough
+        currentDuration = 1 # Resets the current duration
+        stateIndex += 1 # Increases state index by 1 to go to the next one
+        state = list(states.keys())[stateIndex % len(states)] # Converts the keys to a list and grabs the state index, the % ensures it never goes higher than the length of the list
+        associatedLingerTime = states.get(state) # Updates the new linger time
+    else:
+        currentDuration += 1
+    print(f"Time {i:03} State {state}")
 
-# At the end of each step you should output the time and state using the statement on line 14
