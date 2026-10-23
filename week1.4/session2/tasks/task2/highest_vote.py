@@ -1,6 +1,6 @@
 # Week 4, Session 2: Task 2
 
-def most_frequent_string(votes):
+def most_frequent_string(votes=[]):
     """
     This function identifies the string that appears most frequently
     (highest count) in the votes argument and returns it along with the count
@@ -16,7 +16,24 @@ def most_frequent_string(votes):
         and int is the count of its occurences
         - None, None: if votes is empty.
     """
-
+    """
+    if not votes:
+        return None, None
+    else:
+        count = votes.count(votes[0])
+        most = votes[0]
+        for item in votes:
+            if votes.count(item) > count:
+                count = votes.count(item)
+                most = item
+        return most, count
+    """
+    if not votes:
+        return None, None
+    else:
+        count = [votes.count(item) for item in votes]
+        print(count.max())
+        
     # Your task is to complete the body of the function based on the details in the docstring.
     # Hint 1: You can complete this task with for loops or comprehensions 
     # Hint 2: Think about the properties of the various collection-types
