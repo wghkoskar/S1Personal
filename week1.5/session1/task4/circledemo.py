@@ -2,9 +2,13 @@
 
 # Add one or more import statements here to give this program
 # access to the Point and Circle classes defined in geometry.py
-
+import geometry
 # Write a program here that
 #  - Creates a Point object, to represent the centre of a circle
 #  - Creates a Circle object, using the Point object and a value for radius
 #  - Displays the area of the circle
 #  - Displays the perimeter of the circle
+
+p = geometry.Point(1.0, 2.0)
+circle = geometry.Circle(p, 5)
+print(circle.area())

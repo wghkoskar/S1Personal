@@ -1,17 +1,23 @@
-# Week 1.5, Session 1: Task 3
+import math
 
 class Point:
-    """
-    A Point in 2D space.
-    """
+    def __init__(self, x, y):
+        self.x = x
+        self.y = y 
 
-    # Add constructor here
+    def distance(self):
 
-    # Add distance() method here
+        return hypot(self.x, self.y)
 
-    # Add distance_to() method here
-    # (This will need a parameter representing another point)
+    def distance_to(self, point2):
 
+        return hypot(point2.x - self.x, point2.y - self.y)
 
+class Circle:
 
-# Finally, add code here to demonstrate use of Point
+    def __init__(self, radius):
+        self.radius = radius
+    def area(self):
+        return math.pi * self.radius ** 2
+    def circumference(self):
+        return 2 * math.pi * self.radius
