@@ -26,8 +26,9 @@ def test_add_invalid_type():
 def test_invalid_type_pence():
     # complete the test implementation for 
     # invalid type for pence
-    
-
+    with pytest.raises(ValueError) as excinfo:
+        Money(5, 102)
+    assert str(excinfo.value) == 
 def test_invalid_value_pence():
     # complete the test implementation for 
     # invalid value for pence

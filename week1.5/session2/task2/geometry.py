@@ -19,7 +19,11 @@ class Point:
         self.x = x
         self.y = y
 
-    def distance(self):
+    @classmethod
+    def greeting(cls):
+        return "hello"
+
+    def distance(cls):
         """
         Returns distance of this Point from the origin.
         """

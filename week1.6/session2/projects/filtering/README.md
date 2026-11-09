@@ -23,9 +23,9 @@ called **convolution**, which multiplies pixel values by a small matrix
 of weights and sums the result to compute the output value. In the case of
 blurring over a 3x3 neighbourhood, this matrix looks like this:
 
-    1  1  1
-    1  1  1
-    1  1  1
+    1  1  1  1  1  1 
+    1  1  1  1  1  1 
+    1  1  1  1  1  1 
 
 i.e., each pixel value is given equal weight in the sum.
 
