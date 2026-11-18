@@ -1,0 +1,4 @@
+INFO:root:calculate_average(): started
+DEBUG:root:total_score set to 263 - sum of [85, 90, 88]
+DEBUG:root:total_assignemnts set to 3 - length of [85, 90, 88]
+DEBUG:root:average set to 87 - 263 floor divided by 3

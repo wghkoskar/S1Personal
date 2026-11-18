@@ -12,6 +12,7 @@ def process_data(data):
     Returns:
         int: The sum of all integers in the list or None if empty.
     """
+    
     if not data:
         return None
 
